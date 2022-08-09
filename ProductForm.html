@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <!-- link style sheet -->
+        <link rel="stylesheet" href="FormStyle.css">
+    </head>
+    <body>
+        <form id="prodForm">
+            <label for="prodName"> PRODUCT NAME </label><br>
+            <input type="text" id="prodName" required><br>
+                
+            <label for="unitMeasure"> UNIT OF MEASUREMENT </label><br>
+            <input type="text" id="unitMeasure" required><br>
+
+            <label for="price"> PRICE </label><br>
+            <input type="number" id="price" required><br>
+
+            <label for="prodImage"> PRODUCT IMAGE </label><br>
+            <div id="imgBox">
+                <input type="file" accept="image/png, image/jpg, image/gif, image/jpeg" id="prodImage" required><br>
+            </div>
+
+            <label for="prodDescription"> PRODUCT DESCRIPTION </label><br>
+            <input type="text" id="prodDescription" required><br>
+
+            <div id="buttons">
+                <!-- <input type="submit" onclick="submitFunc($)" id="submitBtn" class ="button" value="Save"> -->
+                <button type="submit" class="button">Save</button>
+                <input type="reset" id="resetBtn" class="button"/>
+                <button onclick="viewListFunc()" class="button" id="listBtn"> View Product List</button>
+            </div>
+        </form>
+        <div id="prodList">
+            <div id="headerDiv">
+                <p class="headerMain" id="viewProd"> View Products</p>
+                <button onclick="addProdFunc()" class="headerMain" id="addProdBtn"> Add a Product </button>
+            </div>
+            <table id="prodTable">
+                <tr>
+                    <th>Image</th>
+                    <th>Product Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                    <th>Unit</th>
+                </tr>
+            </table>>
+        </div>
+
+        <script src="Product.js"> </script>
+    </body>
+</html>
